@@ -1,0 +1,55 @@
+# Environment Configuration
+.env
+.env.backup
+.env.production
+
+# Dependencies
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+/storage/logs/*.log
+/storage/logs/*/*.log
+
+# Cache
+/storage/cache/*
+!/storage/cache/.gitkeep
+
+# Uploads
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+
+# Session Files
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+
+# Compiled Files
+*.compiled
+*.cache
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Testing
+/coverage/
+.phpunit.result.cache
+
+# Build
+/build/
+/dist/
+
+# Backup files
+*.bak
+*.backup
+*.sql.backup
