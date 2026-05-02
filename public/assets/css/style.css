@@ -1,0 +1,280 @@
+/* Grand Plaza Hotel & Resort - Custom Styles */
+
+/* Hotel Color Scheme */
+:root {
+    --hotel-primary: #1a3c5e;
+    --hotel-gold: #c5a55a;
+    --hotel-light: #f8f5f0;
+    --hotel-dark: #0d1b2a;
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar { background: var(--hotel-dark) !important; }
+.navbar-brand { font-family: Georgia, serif; letter-spacing: 1px; font-weight: bold; font-size: 1.3rem; }
+
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, var(--hotel-primary) 0%, var(--hotel-dark) 100%);
+    color: white;
+    padding: 5rem 0;
+    margin-top: -1.5rem;
+}
+.hero-section h1 { font-family: Georgia, serif; font-size: 2.8rem; }
+
+/* Cards */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    color: var(--hotel-primary);
+    font-weight: 600;
+}
+
+/* Room cards */
+.room-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Room type badges */
+.badge-single { background: #6c757d; }
+.badge-double { background: #0d6efd; }
+.badge-deluxe { background: #198754; }
+.badge-suite { background: #fd7e14; }
+.badge-presidential { background: #dc3545; }
+
+/* Room image placeholder */
+.room-img-placeholder {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: rgba(255,255,255,0.7);
+}
+.room-img-placeholder.single { background: linear-gradient(135deg, #667eea, #764ba2); }
+.room-img-placeholder.double { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.room-img-placeholder.deluxe { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.room-img-placeholder.suite { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.room-img-placeholder.presidential { background: linear-gradient(135deg, #fa709a, #fee140); }
+
+/* Price display */
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--hotel-primary);
+}
+.price-tag small { font-size: 0.8rem; font-weight: 400; color: #6c757d; }
+
+/* Booking confirmation */
+.confirmation-check { color: #198754; font-size: 5rem; }
+
+/* Jumbotron */
+.jumbotron {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.jumbotron h1 {
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Forms */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    padding: 10px 15px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--hotel-gold);
+    box-shadow: 0 0 0 0.2rem rgba(197, 165, 90, 0.25);
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border-right: none;
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Admin panel */
+.admin-nav { background: var(--hotel-dark); border-radius: 8px; }
+.admin-nav a { color: rgba(255,255,255,0.8); text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: all 0.2s; }
+.admin-nav a:hover, .admin-nav a.active { color: white; background: rgba(255,255,255,0.1); }
+
+/* Stats cards */
+.stat-card { border: none; border-radius: 12px; overflow: hidden; }
+.stat-card .card-body { padding: 1.5rem; }
+.stat-card .stat-number { font-size: 2rem; font-weight: 700; }
+.stat-card .stat-label { font-size: 0.85rem; color: #6c757d; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Footer */
+footer { background: var(--hotel-dark) !important; margin-top: auto; }
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Utilities */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.shadow {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+/* Badge Styles */
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+.table {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.table thead th {
+    background-color: var(--hotel-primary);
+    color: white;
+    border: none;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: var(--hotel-primary);
+}
+
+.dropdown-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Print styles */
+@media print {
+    .navbar, footer, .btn, .admin-nav, .no-print { display: none !important; }
+    .container { max-width: 100% !important; }
+    .card { border: 1px solid #ddd !important; }
+}
+
+/* Toast notification */
+.toast-container { position: fixed; top: 80px; right: 20px; z-index: 9999; }
+
+/* Loading spinner for buttons */
+.btn-loading { position: relative; pointer-events: none; opacity: 0.7; }
+.btn-loading::after {
+    content: ''; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+    width: 16px; height: 16px; border: 2px solid transparent; border-top-color: currentColor;
+    border-radius: 50%; animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .hero-section { padding: 3rem 0; }
+    .hero-section h1 { font-size: 1.8rem; }
+    .stat-card .stat-number { font-size: 1.5rem; }
+    .price-tag { font-size: 1.2rem; }
+    .room-card { margin-bottom: 1rem; }
+
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+
+    .jumbotron .lead {
+        font-size: 1rem;
+    }
+}
